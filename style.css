@@ -1,0 +1,337 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #0F0F0F;
+}
+
+/* Header */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    z-index: 100000;
+}
+
+header .container {
+    display: flex;
+}
+
+header .container div {
+    flex: 1;
+    border: 1px solid transparent;
+}
+
+header .container div .logo {
+    display: block;
+    width: fit-content;
+    margin: 5px 0px 5px 40px;
+}
+
+header .container div .logo img {
+    width: 150px;
+}
+
+header .container div .search {
+    float: right;
+    margin: 10px 40px 0px 0px;
+    background-color: #FF001F;
+    color: #DBDBDB;
+    display: block;
+    height: 40px;
+    width: 40px;
+    font-size: 18px;
+    text-align: center;
+    padding-top: 10px;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+header .container div .search:hover {
+    background-color: #DBDBDB;
+    color: #FF001F;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+}
+
+.hero .background-img {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero .background-img div {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 46.58%, rgba(0, 0, 0, 0.5) 53.62%, rgba(0, 0, 0, 0.7) 100%);
+    height: 100%;
+}
+
+.hero .background-img div h1 {
+    text-align: center;
+    font-size: 60px;
+    color: #DBDBDB;
+    padding: 200px 20px 10px 20px;
+}
+
+.hero .background-img div p {
+    text-align: center;
+    color: #DBDBDB;
+    font-size: 20px;
+    padding: 0px 20px 30px;
+}
+
+
+.hero .background-img div a {
+    text-decoration: none;
+    color: #DBDBDB;
+    background-color: #FF001F;
+    display: block;
+    width: fit-content;
+    padding: 10px 30px;
+    font-size: 20px;
+    border-radius: 50px;
+    margin: auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.hero .background-img div a:hover {
+    background-color: #DBDBDB;
+    color: #0F0F0F;
+}
+
+/* Watch Section */
+.watch-sec {
+    border-top: 10px solid #262626;
+}
+
+.watch-sec .container {
+    display: flex;
+    padding: 50px 40px;
+}
+
+.watch-sec .container div {
+    flex: 1;
+    /*border: 1px solid red;*/
+}
+
+.watch-sec .container div h2 {
+    font-size: 60px;
+    color: #DBDBDB;
+    padding: 50px 0px 20px 0px;
+}
+
+.watch-sec .container div p {
+    color: #DBDBDB;
+    font-size: 25px;
+}
+
+.watch-sec .container div img {
+    width: 500px;
+    border-radius: 20px;
+    float: right;
+}
+
+/* Download Section */
+.down-sec {
+    border-top: 10px solid #262626;
+}
+
+.down-sec .container {
+    display: flex;
+    padding: 50px 40px;
+}
+
+.down-sec .container div {
+    flex: 1;
+    /*border: 1px solid red;*/
+}
+
+.down-sec .container div .for-mobile {
+    display: none;
+}
+
+.down-sec .container div h2 {
+    font-size: 60px;
+    color: #DBDBDB;
+    padding: 50px 0px 20px 0px;
+}
+
+.down-sec .container div p {
+    color: #DBDBDB;
+    font-size: 25px;
+}
+
+.down-sec .container div img {
+    width: 500px;
+    border-radius: 20px;
+}
+
+/* FAQ Section */
+.faq-sec {
+    border-top: 10px solid #262626;
+    padding: 50px 40px;
+}
+
+.faq-sec h2 {
+    text-align: center;
+    font-size: 60px;
+    color: #DBDBDB;
+    padding-bottom: 30px;
+}
+
+.faq {
+    width: 60%;
+    margin: 0px auto 10px;
+}
+
+.accordion {
+    background-color: #262626;
+    color: #DBDBDB;
+    cursor: pointer;
+    padding: 20px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 25px;
+    transition: 0.4s;
+}
+
+.active,
+.accordion:hover {
+    background-color: #262626;
+}
+
+.panel {
+    padding: 20px;
+    background-color: #262626;
+    color: #DBDBDB;
+    display: none;
+    font-size: 25px;
+    margin-top: 2px;
+}
+
+/* Footer */
+footer {
+    color: #DBDBDB;
+    padding: 10px 20px 20px;
+    text-align: center;
+    font-size: 15px;
+}
+
+
+@media screen and (max-width: 1100px) {
+
+    /* Watch */
+    .watch-sec .container {
+        display: block;
+    }
+
+    .watch-sec .container div h2 {
+        text-align: center;
+        padding: 0px 0px 20px 0px;
+    }
+
+    .watch-sec .container div p {
+        text-align: center;
+        padding-bottom: 30px;
+    }
+
+    .watch-sec .container div img {
+        float: none;
+        display: block;
+        margin: auto;
+    }
+
+    /* Download Section */
+    .down-sec .container {
+        display: block;
+    }
+
+    .down-sec .container div h2 {
+        text-align: center;
+        padding: 0px 0px 20px 0px;
+    }
+
+    .down-sec .container div p {
+        text-align: center;
+        padding-bottom: 30px;
+    }
+
+    .down-sec .container div img {
+        display: block;
+        margin: auto;
+    }
+
+    .down-sec .container div .for-mobile {
+        display: block;
+    }
+
+    .down-sec .container div .for-desktop {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    /* Hero Section */
+    .hero .background-img div h1 {
+        padding: 150px 20px 10px 20px;
+    }
+
+    .hero .background-img div h1 br,
+    .hero .background-img div p br {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 650px) {
+
+    /* Header */
+    header .container div .logo {
+        margin: 2px 0px 5px 20px;
+    }
+
+    header .container div .search {
+        margin: 8px 20px 0px 0px;
+    }
+
+    /* All Section */
+    .hero .background-img div h1 {
+        font-size: 40px;
+        padding: 150px 20px 10px 20px;
+    }
+    .hero .background-img div p {
+        font-size: 18px;
+    }
+    .watch-sec .container,
+    .down-sec .container,
+    .faq-sec {
+        padding: 50px 20px;
+    }
+    .watch-sec .container div h2,
+    .down-sec .container div h2,
+    .faq-sec h2 {
+        font-size: 40px;
+    }
+    .watch-sec .container div p,
+    .down-sec .container div p,
+    .accordion,
+    .panel {
+        font-size: 18px;
+    }
+    .watch-sec .container div img,
+    .down-sec .container div img {
+        width: 100%;
+    }
+}
